@@ -1,0 +1,13 @@
+<Configuration packages="test.log4j,test.log4j.plugin">
+  <Appenders>
+    <Local name="local" />
+    <FromJar name="from-jar" />
+  </Appenders>
+
+  <Loggers>
+    <Logger name="test.log4j.PluginTest" level="info" additivity="false">
+      <AppenderRef ref="local" />
+      <AppenderRef ref="from-jar" />
+    </Logger>
+  </Loggers>
+</Configuration>
