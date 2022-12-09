@@ -1,26 +1,26 @@
-package test.log4j;
+package test.log4j3;
 
 import org.apache.logging.log4j.core.Appender;
 import org.apache.logging.log4j.core.LogEvent;
 import org.apache.logging.log4j.core.appender.AbstractAppender;
 import org.apache.logging.log4j.core.config.Property;
+import org.apache.logging.log4j.core.config.plugins.PluginAttribute;
+import org.apache.logging.log4j.core.config.plugins.PluginFactory;
 import org.apache.logging.log4j.core.layout.PatternLayout;
 import org.apache.logging.log4j.plugins.Configurable;
 import org.apache.logging.log4j.plugins.Plugin;
-import org.apache.logging.log4j.plugins.PluginAttribute;
-import org.apache.logging.log4j.plugins.PluginFactory;
 
+@Plugin("Legacy")
 @Configurable(elementType = Appender.ELEMENT_TYPE)
-@Plugin("Local")
-public class LocalAppender extends AbstractAppender {
+public class LegacyAppender extends AbstractAppender {
 
-    public LocalAppender(String name) {
+    public LegacyAppender(String name) {
         super(name, null, PatternLayout.createDefaultLayout(), false, Property.EMPTY_ARRAY);
     }
 
     @PluginFactory
-    public static LocalAppender createAppender(@PluginAttribute("name") String name) {
-        return new LocalAppender(name);
+    public static LegacyAppender createAppender(@PluginAttribute("name") String name) {
+        return new LegacyAppender(name);
     }
 
     @Override
