@@ -49,6 +49,13 @@
             <arg>--add-modules</arg>
             <arg>org.apache.logging.log4j,org.apache.logging.log4j.core</arg>
           </compilerArgs>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.apache.logging.log4j</groupId>
+              <artifactId>log4j-core</artifactId>
+              <version>2.19.0</version>
+            </path>
+          </annotationProcessorPaths>
         </configuration>
       </plugin>
     </plugins>

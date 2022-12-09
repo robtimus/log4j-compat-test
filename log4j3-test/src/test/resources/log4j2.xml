@@ -1,4 +1,4 @@
-<Configuration packages="test.log4j,test.log4j.plugin">
+<Configuration status="DEBUG" verbose="false">
   <Appenders>
     <Local name="local" />
     <Legacy name="legacy" />
@@ -6,7 +6,7 @@
   </Appenders>
 
   <Loggers>
-    <Logger name="test.log4j.PluginTest" level="info" additivity="false">
+    <Logger name="test.log4j3.PluginTest" level="info" additivity="false">
       <AppenderRef ref="local" />
       <AppenderRef ref="legacy" />
       <AppenderRef ref="from-jar" />
